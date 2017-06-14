@@ -110,7 +110,7 @@ if (!is_null($events['events'])) {
 			// Make Push Messageing
 			$displayName = $events['displayName'];
 			$groupId = $events['groupId'];
-			$text = $displayName." Group\n".$groupId;
+			$text = $displayName." Group ID\n".$groupId;
 			
 			//$text = "Group\n".$togroupid;
 			
