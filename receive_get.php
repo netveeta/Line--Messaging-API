@@ -20,7 +20,7 @@ if (!is_null($text)) {
 	$messages = t1($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'xxxxxxx',
+  		'to' => 'xxxxxxx',// กลุ่ม
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
