@@ -20,8 +20,8 @@ if (!is_null($events['events'])) {
 			// Get Replytoken
 			$replyToken = $event['replyToken'];
 			//Make a POST Request to Messaging API to reply to follower
-			$messages = t1($togroupid);
-			//$messages = t1($gentext);
+			//$messages = t1($togroupid);
+		        $messages = t1($gentext);
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = data1($replyToken,$messages);
 			$post = json_encode($data);
@@ -52,7 +52,7 @@ if (!is_null($events['events'])) {
 			$events = json_decode($result, true);
 			// Make Push Messageing
 			$displayName = $events['displayName'];
-			$userId = $events['userId'];
+			$userId = $events['groupId'];
 			$text = $displayName." User\n".$userId;
 			$messages = [
 				'type' => 'text',
