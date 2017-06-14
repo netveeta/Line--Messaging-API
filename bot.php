@@ -15,11 +15,13 @@ if (!is_null($events['events'])) {
 			$toroomid = $event['source']['roomId'];
 			$togroupid = $event['source']['groupId'];
 			// Gen Text Reply
+			//$gentext = "ขอบคุณที่ติดตามเรา";
 			$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
 			$replyToken = $event['replyToken'];
 			//Make a POST Request to Messaging API to reply to follower
-			$messages = t1($gentext);
+			$messages = t1($togroupid);
+			//$messages = t1($gentext);
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = data1($replyToken,$messages);
 			$post = json_encode($data);
