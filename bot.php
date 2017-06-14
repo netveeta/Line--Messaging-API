@@ -97,23 +97,23 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 			
-			// Find Group Data
-			//$url = 'https://api.line.me/v2/bot/group/'.$togroupid;
-			//$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-			//$ch = curl_init($url);
-			//curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-			//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			//$result = curl_exec($ch);
-			//curl_close($ch);
-			//$events = json_decode($result, true);
+			 //Find Group Data
+			$url = 'https://api.line.me/v2/bot/group/'.$togroupid;
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			$result = curl_exec($ch);
+			curl_close($ch);
+			$events = json_decode($result, true);
 			// Make Push Messageing
-			//$displayName = $events['displayName'];
-			//$groupId = $events['groupId'];
-			//$text = $displayName." Group\n".$groupId;
+			$displayName = $events['displayName'];
 			$groupId = $events['groupId'];
+			$text = $displayName." Group\n".$groupId;
+			
 			//$text = "Group\n".$togroupid;
-			$text = "Group\n".$groupId;
+			
 			$messages = [
 				'type' => 'text',
 				'text' => $text
