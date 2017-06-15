@@ -9,9 +9,10 @@ function t1($tt1)
 		];
 	return $messages;
 }
+$A_Token =$_GET["accesstoken"];
 $StrGet = $_GET["strget"];
 $text = $StrGet;
-$A_Token =$_GET["accesstoken"];
+
 //$PyGroupid =$_GET["Group_ID"];
 //$text = "Test";
 	 
