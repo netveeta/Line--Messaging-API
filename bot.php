@@ -111,8 +111,8 @@ if (!is_null($events['events'])) {
 			//$displayName = $events['displayName'];
 			//$groupId = $events['groupId'];
 			//$text = $displayName." Group ID\n".$groupId;
-			
-			$text = "Group\n".$togroupid;
+			$GId = $events['groupId'];
+			$text = "Group\n".$GId;
 			
 			$messages = [
 				'type' => 'text',
