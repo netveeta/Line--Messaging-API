@@ -9,9 +9,10 @@ function t1($tt1)
 		];
 	return $messages;
 }
-$StrGet = $_GET["strget"];
-$text = $StrGet;
-$A_Token =$_GET["accesstoken"];
+$PyStrGet = $_GET["strget"];
+$text = $PyStrGet;
+$PyA_Token =$_GET["accesstoken"];
+$PyGroupid =$_GET["GroupID"];
 //$text = "Test";
 	
 	
@@ -21,12 +22,12 @@ if (!is_null($text)) {
 	$messages = t1($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		//'to' => 'U49d231f60632d35f81e433a0a891d84e',// กลุ่ม
-		'to' => 'Cd301c62d855132ea1bcf698eb38532ed',
+  		
+		'to' => $PyGroupid,//Cd301c62d855132ea1bcf698eb38532ed'
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
-	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $A_Token);//$access_token
+	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $PyA_Token);//$access_token
 			
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
