@@ -14,7 +14,7 @@ $text = $StrGet;
 $PyA_Token =$_GET["accesstoken"];
 //$PyGroupid =$_GET["Group_ID"];
 //$text = "Test";
-	
+	 
 	
 if (!is_null($text)) {
 //if (!empty($_POST)){
