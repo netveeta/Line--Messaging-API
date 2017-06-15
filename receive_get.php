@@ -21,7 +21,7 @@ if (!is_null($text)) {
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		//'to' => 'U49d231f60632d35f81e433a0a891d84e',// กลุ่ม
-		'to' => 'Cd301c62d855132ea1bcf698eb38532ed'
+		'to' => 'Cd301c62d855132ea1bcf698eb38532ed',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
