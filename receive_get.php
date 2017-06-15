@@ -12,7 +12,7 @@ function t1($tt1)
 $PyStrGet = $_GET["strget"];
 $text = $PyStrGet;
 $PyA_Token =$_GET["accesstoken"];
-$PyGroupid =$_GET["GroupID"];
+$PyGroupid =$_GET["Group_ID"];
 //$text = "Test";
 	
 	
@@ -23,7 +23,7 @@ if (!is_null($text)) {
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		
-		'to' => '$PyGroupid',//Cd301c62d855132ea1bcf698eb38532ed'
+		'to' => $PyGroupid,//Cd301c62d855132ea1bcf698eb38532ed'
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
