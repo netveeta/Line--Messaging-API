@@ -12,7 +12,7 @@ function t1($tt1)
 $PyStrGet = $_GET["strget"];
 $text = $PyStrGet;
 $PyA_Token =$_GET["accesstoken"];
-$PyGroupid =$_GET["Group_ID"];
+//$PyGroupid =$_GET["Group_ID"];
 //$text = "Test";
 	
 	
