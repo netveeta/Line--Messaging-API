@@ -23,7 +23,7 @@ if (!is_null($text)) {
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		
-		'to' => $PyGroupid,//Cd301c62d855132ea1bcf698eb38532ed'
+		'to' => '$PyGroupid',//Cd301c62d855132ea1bcf698eb38532ed'
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
