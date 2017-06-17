@@ -10,8 +10,8 @@ function t1($tt1)
 	return $messages;
 }
 $Accesstoken =$_GET["accesstoken"];
-$StrGet = $_GET["strget"];
-//$StrGet = 'TEST';
+//$StrGet = $_GET["strget"];
+$StrGet = 'TEST';
 //$messagesToken = t1($A_Token);
 //$text = $StrGet;
 
