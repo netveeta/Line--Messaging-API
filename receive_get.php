@@ -9,7 +9,7 @@ function t1($tt1)
 		];
 	return $messages;
 }
-$A_Token =json_encode($_GET["accesstoken"]);
+$A_Token =$_GET["accesstoken"];
 $StrGet = $_GET["strget"];
 //$messagesToken = t1($A_Token);
 //$text = $StrGet;
