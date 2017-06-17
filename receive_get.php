@@ -12,8 +12,6 @@ function t1($tt1)
 $Accesstoken =$_GET["accesstoken"];
 //$StrGet = $_GET["strget"];
 $StrGet = 'TEST';
-$tttt1  = t1($Accesstoken);
-$tttt=json_encode($tttt1);
 //$messagesToken = t1($A_Token);
 //$text = $StrGet;
 
@@ -33,7 +31,7 @@ if (!is_null($StrGet)) {
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
-	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' .$tttt);//$access_token
+	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' .$Accesstoken);//$access_token
 			
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
