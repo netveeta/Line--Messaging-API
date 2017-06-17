@@ -11,6 +11,7 @@ function t1($tt1)
 }
 $A_Token =$_GET["accesstoken"];
 $StrGet = $_GET["strget"];
+$messagesToken = t1($A_Token);
 //$text = $StrGet;
 
 //$PyGroupid =$_GET["Group_ID"];
@@ -29,7 +30,7 @@ if (!is_null($StrGet)) {
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
-	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' .$access_token);//$access_token
+	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' .$messagesToken);//$access_token
 			
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
