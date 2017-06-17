@@ -10,6 +10,7 @@ function t1($tt1)
 	return $messages;
 }
 $Accesstoken =$_GET["accesstoken"];
+$Gid =$_GET["gid"];
 $StrGet = $_GET["strget"];
 //$StrGet = 'TEST';
 //$messagesToken = t1($A_Token);
@@ -27,7 +28,7 @@ if (!is_null($StrGet)) {
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		
-		'to' => 'Cd301c62d855132ea1bcf698eb38532ed',//Cd301c62d855132ea1bcf698eb38532ed
+		'to' => $Gid,//Cd301c62d855132ea1bcf698eb38532ed
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
