@@ -11,16 +11,17 @@ function t1($tt1)
 }
 $A_Token =$_GET["accesstoken"];
 $StrGet = $_GET["strget"];
-$text = $StrGet;
+//$text = $StrGet;
 
 //$PyGroupid =$_GET["Group_ID"];
 //$text = "Test";
 	 
-	
-if (!is_null($text)) {
+//if (!is_null($text))
+if (!is_null($StrGet)) {
 //if (!empty($_POST)){
 	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
-	$messages = t1($text);
+	//$messages = t1($text);
+	$messages = t1($StrGet);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		
@@ -39,6 +40,6 @@ if (!is_null($text)) {
 	$result = curl_exec($ch);
 	curl_close($ch);
 	echo $result . "\r\n";	
-	echo $text;
+	echo $StrGet;
 }
 ?>
