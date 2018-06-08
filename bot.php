@@ -61,7 +61,7 @@ if (!is_null($events['events'])) {
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' => 'C6c6c8b51fd2155fffe06e0aa287c817e',
+				'to' => 'Cbba671d3c1043d9d231a951b25edc69b',
 				'messages' => [$messages]
 			];
 			$post = json_encode($data);
@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 			
 			// To group Mac Share
 			$data = [
-				'to' => 'C6c6c8b51fd2155fffe06e0aa287c817e',
+				'to' => 'Cbba671d3c1043d9d231a951b25edc69b',
 				'messages' => [$messages]
 			];
 			$post = json_encode($data);
@@ -121,7 +121,7 @@ if (!is_null($events['events'])) {
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' => 'C6c6c8b51fd2155fffe06e0aa287c817e',
+				'to' => 'Cbba671d3c1043d9d231a951b25edc69b',
 				'messages' => [$messages]
 			];
 			$post = json_encode($data);
