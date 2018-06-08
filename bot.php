@@ -15,7 +15,8 @@ if (!is_null($events['events'])) {
 			$toroomid = $event['source']['roomId'];
 			$togroupid = $event['source']['groupId'];
 			// Gen Text Reply
-			$gentext = $event['source']['groupId'];
+			//$gentext = $event['source']['groupId'];
+			$gentext = $event['source']['userId'];
 			//$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
 			$replyToken = $event['replyToken'];
