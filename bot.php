@@ -12,7 +12,7 @@ if (!is_null($events['events'])) {
 	  if ($event['type'] == 'message'){
 		  
 	  }
-		if (($event['type'] == 'message') or ($event['type'] == 'join')) {
+		if ($event['type'] == 'join') {
 			// Get user follow or join me
 			$touserid = $event['source']['userId'];
 			$toroomid = $event['source']['roomId'];
