@@ -9,6 +9,9 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
   foreach ($events['events'] as $event) {
     // Reply only when Follow me.
+	  if ($event['type'] == 'message'){
+		  
+	  }
 		if (($event['type'] == 'message') or ($event['type'] == 'join')) {
 			// Get user follow or join me
 			$touserid = $event['source']['userId'];
