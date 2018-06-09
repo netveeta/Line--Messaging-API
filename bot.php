@@ -37,10 +37,10 @@ if (!is_null($events['events'])) {
 
 	
 			
-			$gentext1 = $event['source']['userId'];
+			$gentext1 = $event1['source']['userId'];
 			//$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
-			$replyToken1 = $event['replyToken'];
+			$replyToken1 = $event1['replyToken'];
 			//Make a POST Request to Messaging API to reply to follower
 			//$messages = t1($togroupid);
 		        $messages1 = t1($gentext1);
