@@ -1,3 +1,3 @@
 <?php
-echo "Jeerapote say : Hello World";
+echo "Echo Bot";
 ?>
