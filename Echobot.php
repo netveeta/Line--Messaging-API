@@ -8,7 +8,7 @@
       // Make a POST Request to Messaging API to reply to sender
       $url = 'https://api.line.me/v2/bot/message/push';
       $data = [
-        'to' => 'Uf19a507ea61d612b5600b55ff34ac3f5',
+        'to' => 'Cbba671d3c1043d9d231a951b25edc69b',
         'messages' => [$messages],
       ];
       $post = json_encode($data);
