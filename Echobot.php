@@ -6,6 +6,12 @@ $access_token = 'vIqVV9lNX5yNkf7r4nm+FFAesNeaypSuYC/OOW9LOiRptDrt0/ELtOJekuhmaba
         //'text' => $text
       ];
       // Make a POST Request to Messaging API to reply to sender
+if (!is_null($events['events'])) {
+	echo "line bot";
+	// Loop through each event
+	foreach ($events['events'] as $event) {
+		// Reply only when message sent is in 'text' format
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
       $url = 'https://api.line.me/v2/bot/message/push';
       $data = [
         'to' => 'Cbba671d3c1043d9d231a951b25edc69b',
@@ -22,6 +28,8 @@ $access_token = 'vIqVV9lNX5yNkf7r4nm+FFAesNeaypSuYC/OOW9LOiRptDrt0/ELtOJekuhmaba
       $result = curl_exec($ch);
       curl_close($ch);
       echo $result . "\r\n"; 
-
+    }
+  }
+}
 echo "Echo Line Bot";
 ?>
