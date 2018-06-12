@@ -23,5 +23,5 @@
       curl_close($ch);
       echo $result . "\r\n"; 
 }
-echo 'Echo line bot';
+echo "Echo Line Bot;
 ?>
