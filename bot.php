@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 			//Make a POST Request to Messaging API to reply to follower
 			//$messages = t1($togroupid);
 		        $messages = t1($gentext);
-			//$url = 'https://api.line.me/v2/bot/message/reply';
+			$url = 'https://api.line.me/v2/bot/message/reply';
 		       
 			$data = data1($replyToken,$messages);
 			$post = json_encode($data);
