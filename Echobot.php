@@ -1,4 +1,3 @@
 <?php
-
-echo "Echo Line Bot;
+echo "Jeerapote say : Hello World";
 ?>
