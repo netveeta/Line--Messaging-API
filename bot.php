@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			//$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
 			//$replyToken = $event['replyToken'];
-		        $replyToken = $event['Cbba671d3c1043d9d231a951b25edc69b'];
+		        $replyToken = 'Cbba671d3c1043d9d231a951b25edc69b';
 			//Make a POST Request to Messaging API to reply to follower
 			//$messages = t1($togroupid);
 		        $messages = t1($gentext);
