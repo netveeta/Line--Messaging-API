@@ -13,13 +13,13 @@ if (!is_null($events['events'])) {
 		  $gentext = $event['source']['userId'];
 			//$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
-			//$replyToken = $event['replyToken'];
-		        $replyToken = 'Cbba671d3c1043d9d231a951b25edc69b';
+		        $replyToken = $event['replyToken'];
+		        
 			//Make a POST Request to Messaging API to reply to follower
 			//$messages = t1($togroupid);
 		        $messages = t1($gentext);
 			//$url = 'https://api.line.me/v2/bot/message/reply';
-		        $url = 'https://api.line.me/v2/bot/message/push';
+		       
 			$data = data1($replyToken,$messages);
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
