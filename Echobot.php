@@ -1,10 +1,6 @@
 <?php
 $access_token = 'vIqVV9lNX5yNkf7r4nm+FFAesNeaypSuYC/OOW9LOiRptDrt0/ELtOJekuhmabamyn5ssrtDODisO/XE2wvauE7MTr1C0xIY84aHbRZRQDRtEojxs7UtkvssK7Y4eS4Xj/r+krB7u9ueoZVAjmOvMwdB04t89/1O/w1cDnyilFU='; 
-  $messages = [
-        'type' => 'text',
-        'text' => $msg
-        //'text' => $text
-      ];
+
       // Make a POST Request to Messaging API to reply to sender
 if (!is_null($events['events'])) {
 	echo "line bot";
@@ -13,9 +9,10 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
       $url = 'https://api.line.me/v2/bot/message/push';
+      $text = $event['message']['text'];
       $data = [
         'to' => 'Cbba671d3c1043d9d231a951b25edc69b',
-        'messages' => [$messages],
+        'messages' => [$text],
       ];
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
