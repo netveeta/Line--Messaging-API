@@ -22,6 +22,6 @@ $access_token = 'vIqVV9lNX5yNkf7r4nm+FFAesNeaypSuYC/OOW9LOiRptDrt0/ELtOJekuhmaba
       $result = curl_exec($ch);
       curl_close($ch);
       echo $result . "\r\n"; 
-}
+
 echo "Echo Line Bot";
 ?>
